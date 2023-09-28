@@ -1,0 +1,4 @@
+// Crear un archivo .env y copiar esto con tus datos:
+// SECRET = ""  palabra secreta random para generar tokens
+// EMAIL = ""   mail para enviar los mails desde aca gmail o a eleccion
+// TOKEN = ""   token a generar en google en el apartado contraseñas para aplicaciones
