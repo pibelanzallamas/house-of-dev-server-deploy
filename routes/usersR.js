@@ -2,8 +2,8 @@ const express = require("express");
 const users = express.Router();
 const { Users } = require("../models");
 const { generateToken, validateToken } = require("../config/tokens.js");
-const transporter = require("../utils/mail");
 require("dotenv").config();
+const transporter = require("../utils/mail");
 
 users.post("/register", (req, res) => {
   const { email, name, password, telephone } = req.body;
