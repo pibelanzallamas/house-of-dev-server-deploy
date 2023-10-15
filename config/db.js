@@ -8,6 +8,7 @@ const db = new Sequelize(
   {
     host: "dpg-ck4fqqk2kpls73e3ovdg-a",
     dialect: "postgres",
+    port: 5432,
     logging: false,
     timezone: "-03:00",
   }
