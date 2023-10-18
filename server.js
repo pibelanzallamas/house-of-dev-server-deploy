@@ -8,8 +8,8 @@ const models = require("./models");
 
 app.use(
   cors({
-    origin: "https://house-of-dev-client.vercel.app",
-    methods: ["GET", "POST", "DELETE", "OPTIONS"],
+    origin: "https://house-of-dev-client.vercel.app/",
+    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
     credentials: true,
   })
 );
