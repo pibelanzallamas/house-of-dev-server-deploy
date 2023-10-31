@@ -43,7 +43,7 @@ users.post("/login", (req, res) => {
         };
 
         const token = generateToken(payload);
-        window.localStorage.setItem("user", token);
+        res.cookie("token", token);
         res.send(payload);
       });
     })
@@ -78,7 +78,7 @@ users.put("/:id", (req, res) => {
 });
 
 users.post("/me", (req, res) => {
-  const token = window.localStorage.getItem("user");
+  const token = req.cookies.token;
   if (!token) return res.sendStatus(401);
   const { payload } = validateToken(token);
   if (!payload) return res.sendStatus(401);
@@ -86,7 +86,7 @@ users.post("/me", (req, res) => {
 });
 
 users.post("/logout", (req, res) => {
-  window.localStorage.removeItem("user");
+  res.clearCookie("token");
   res.sendStatus(204);
 });
 
