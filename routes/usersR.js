@@ -103,7 +103,7 @@ users.post("/register/:email", (req, res) => {
   const { date, place } = req.body;
 
   const mailOptions = {
-    from: process.env.EMAIL,
+    from: "brandoncastillo.09@gmail.com",
     to: email,
     subject: "Confirmación de Cita - House of Dev",
     html: `<h1 style="color: blue;"> Su cita en ${
@@ -134,7 +134,7 @@ users.post("/delete/:email", (req, res) => {
   const { email } = req.params;
 
   const mailOptions = {
-    from: process.env.EMAIL,
+    from: "brandoncastillo.09@gmail.com",
     to: email,
     subject: "Cancelación de Cita - House of Dev",
     html: `<h1 style="color: blue;"> Su cita ha sido!</h1> <p> Usted o el propietario ha cancelado la cita. Para más información ingrese al sitio web. </p>
