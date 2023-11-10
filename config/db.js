@@ -1,12 +1,11 @@
-require("dotenv").config();
 const Sequelize = require("sequelize");
 
 const db = new Sequelize(
-  "housedb",
-  "brandon",
-  "oYJOZG0sw10oTC21HOgICcDa3mh6JhJu",
+  "ilymrqdb",
+  "ilymrqdb",
+  "6MfIxBy1B6_X2Z3oTzLDb9kufGUq2wsy",
   {
-    host: "dpg-ck4fqqk2kpls73e3ovdg-a",
+    host: "suleiman.db.elephantsql.com",
     dialect: "postgres",
     logging: false,
     timezone: "-03:00",
