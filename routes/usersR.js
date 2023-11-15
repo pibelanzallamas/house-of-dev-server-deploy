@@ -26,6 +26,8 @@ users.post("/register", (req, res) => {
 users.post("/login", (req, res) => {
   const { email, password } = req.body;
 
+  console.log(email);
+
   Users.findOne({ where: { email } })
     .then((user) => {
       if (!user) return res.sendStatus(401); //usuario no registrado
@@ -42,7 +44,7 @@ users.post("/login", (req, res) => {
         };
 
         const token = generateToken(payload);
-        res.cookie("token", token);
+        //res.cookie("token", token);
         res.send(payload);
       });
     })

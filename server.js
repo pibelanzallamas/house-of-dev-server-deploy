@@ -31,8 +31,8 @@ app.use((err, req, res, next) => {
 db.sync({ force: false })
   .then(function () {
     console.log("Base de datos conectada correctamente!");
-    app.listen(5432, () =>
-      console.log("Servidor escuchando en el puerto 3001")
+    app.listen(3000, () =>
+      console.log("Servidor escuchando en el puerto 3000")
     );
   })
   .catch(console.error);
