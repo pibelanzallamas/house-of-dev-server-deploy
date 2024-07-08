@@ -1,15 +1,14 @@
+require("dotenv").config();
 const Sequelize = require("sequelize");
 
 const db = new Sequelize(
-  "ilymrqdb",
-  "ilymrqdb",
-  "6MfIxBy1B6_X2Z3oTzLDb9kufGUq2wsy",
+  process.env.DBNAME,
+  process.env.DBUSERNAME,
+  process.env.DBPASSWORD,
   {
-    host: "suleiman.db.elephantsql.com",
+    host: process.env.DBPASSWORD,
     dialect: "postgres",
     logging: false,
     timezone: "-03:00",
   }
 );
-
-module.exports = db;
