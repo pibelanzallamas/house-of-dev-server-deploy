@@ -10,7 +10,6 @@ const db = new Sequelize(
     dialect: "postgres",
     logging: false,
     timezone: "-03:00",
-    port: 5432,
   }
 );
 
