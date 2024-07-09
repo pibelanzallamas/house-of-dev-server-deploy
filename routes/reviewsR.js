@@ -1,6 +1,6 @@
 const express = require("express");
 const reviews = express.Router();
-const reviewsC = require("../controllers/reviewsC");
+const { reviewsC } = require("../controllers");
 const validateUser = require("../middleware/auth");
 
 //crear review

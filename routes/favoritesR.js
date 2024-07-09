@@ -1,6 +1,6 @@
 const express = require("express");
 const favorites = express.Router();
-const favoritesC = require("../controllers/favoritesC");
+const { favoritesC } = require("../controllers");
 
 //like
 favorites.post("/register", favoritesC.crearFav);

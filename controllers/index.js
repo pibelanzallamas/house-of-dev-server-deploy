@@ -1,11 +1,13 @@
-const usersCont = require("./usersC");
-const propertiesCont = require("./propertiesC");
-const appointmentsCont = require("./appointmentsC");
-const reviewsCont = require("./reviewsC");
+const usersC = require("./usersC");
+const propertiesC = require("./propertiesC");
+const favoritesC = require("./favoritesC");
+const appointmentC = require("./appointmentsC");
+const reviewsC = require("./reviewsC");
 
 module.exports = {
-  usersCont,
-  propertiesCont,
-  appointmentsCont,
-  reviewsCont,
+  usersC,
+  propertiesC,
+  favoritesC,
+  appointmentC,
+  reviewsC,
 };

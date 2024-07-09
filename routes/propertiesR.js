@@ -1,6 +1,6 @@
 const express = require("express");
 const properties = express.Router();
-const propertiesC = require("../controllers/propertiesC");
+const { propertiesC } = require("../controllers");
 const validateUser = require("../middleware/auth");
 
 properties.post("/register", propertiesC.crearProp);

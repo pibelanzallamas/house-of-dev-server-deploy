@@ -1,6 +1,6 @@
+require("dotenv").config();
 const { Users } = require("../models");
 const { generateToken } = require("../config/tokens.js");
-require("dotenv").config();
 const transporter = require("../utils/mail");
 
 const usersC = {};

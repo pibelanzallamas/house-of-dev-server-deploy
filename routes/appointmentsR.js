@@ -1,6 +1,6 @@
 const express = require("express");
 const appointments = express.Router();
-const appointmentC = require("../controllers/appointmentsC");
+const { appointmentC } = require("../controllers");
 const validateUser = require("../middleware/auth");
 
 //crear appointment
