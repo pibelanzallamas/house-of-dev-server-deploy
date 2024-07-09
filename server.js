@@ -6,13 +6,13 @@ const db = require("./config/db");
 const routes = require("./routes");
 const models = require("./models");
 
-// app.use(
-//   cors({
-//     origin: "https://house-of-dev-client.vercel.app",
-//     methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
-//     credentials: true,
-//   })
-// );
+app.use(
+  cors({
+    origin: "https://house-of-dev-client.vercel.app",
+    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+    credentials: true,
+  })
+);
 
 app.use(cookieParser());
 app.use(express.json());
