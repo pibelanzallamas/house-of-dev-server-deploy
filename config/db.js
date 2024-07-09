@@ -13,3 +13,5 @@ const db = new Sequelize(
     port: 5432,
   }
 );
+
+module.exports = db;
