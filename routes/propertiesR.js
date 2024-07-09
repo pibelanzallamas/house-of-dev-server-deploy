@@ -3,7 +3,7 @@ const properties = express.Router();
 const { propertiesC } = require("../controllers");
 const validateUser = require("../middleware/auth");
 
-properties.post("/register", propertiesC.crearProp);
+properties.post("/register", validateUser, propertiesC.crearProp);
 
 properties.get("/all", validateUser, propertiesC.allProp);
 
@@ -15,8 +15,8 @@ properties.get("/all/menor", propertiesC.menorProp);
 
 properties.get("/:id", propertiesC.oneProp);
 
-properties.put("/mod/:id", propertiesC.modProp);
+properties.put("/mod/:id", validateUser, propertiesC.modProp);
 
-properties.delete("/:id", propertiesC.delProp);
+properties.delete("/:id", validateUser, propertiesC.delProp);
 
 module.exports = properties;
