@@ -43,7 +43,10 @@ usersC.ingresoUsuario = (req, res) => {
         };
 
         const token = generateToken(payload);
-        res.cookie("token", token);
+        res.cookie("token", token, {
+          secure: true,
+          sameSite: "None",
+        });
         res.send(payload);
       });
     })
