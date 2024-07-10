@@ -44,6 +44,7 @@ usersC.ingresoUsuario = (req, res) => {
 
         const token = generateToken(payload);
         res.cookie("token", token, {
+          httpOnly: true,
           secure: true,
           sameSite: "None",
         });
