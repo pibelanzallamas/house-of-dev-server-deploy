@@ -38,7 +38,6 @@ propertiesC.crearProp = (req, res) => {
 };
 
 propertiesC.allProp = (req, res) => {
-  console.log(req.user);
   if (req.user.admin) {
     Properties.findAll({
       order: [["id", "ASC"]],
