@@ -6,6 +6,8 @@ const db = require("./config/db");
 const routes = require("./routes");
 const models = require("./models");
 
+app.use(cookieParser());
+
 app.use(
   cors({
     origin: "https://house-of-dev-client.vercel.app",
@@ -14,7 +16,6 @@ app.use(
   })
 );
 
-app.use(cookieParser());
 app.use(express.json());
 app.use("/api", routes);
 

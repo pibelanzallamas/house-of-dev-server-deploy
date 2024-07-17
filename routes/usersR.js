@@ -15,7 +15,7 @@ users.get("/all", validateUser, usersC.allUsuario);
 
 users.get("/:id", usersC.oneUsuario);
 
-users.post("/me", validateUser, usersC.meUsuario);
+users.get("/me", validateUser, usersC.meUsuario);
 
 users.post("/logout", usersC.logoutUsuario);
 
