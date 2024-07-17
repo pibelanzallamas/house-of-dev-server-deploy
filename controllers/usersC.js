@@ -94,6 +94,7 @@ usersC.oneUsuario = (req, res) => {
 };
 
 usersC.meUsuario = (req, res) => {
+  console.log("req.user from me", req.user);
   res.send(req.user);
 };
 
