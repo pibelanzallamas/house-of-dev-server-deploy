@@ -1,10 +1,8 @@
 const { validateToken } = require("../config/tokens.js");
 
 function validateUser(req, res, next) {
-  const cookies = require("cookie-parser");
   const token = req.cookies.token;
   console.log("token", token);
-  console.log("req", req);
   if (!token) return res.sendStatus(401);
   const { payload } = validateToken(token);
   console.log("payload", payload);
