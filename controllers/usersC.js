@@ -42,14 +42,6 @@ usersC.ingresoUsuario = (req, res) => {
           admin: user.admin,
         };
 
-        const token = generateToken(payload);
-
-        res.cookie("token", token, {
-          httpOnly: true,
-          secure: true,
-          sameSite: "None",
-        });
-
         res.send(payload);
       });
     })
@@ -99,7 +91,6 @@ usersC.meUsuario = (req, res) => {
 };
 
 usersC.logoutUsuario = (req, res) => {
-  res.clearCookie("token");
   res.sendStatus(204);
 };
 
