@@ -54,7 +54,7 @@ usersC.modUsuario = (req, res) => {
 
   Users.update(data, { where: { id }, returning: true })
     .then((upd) => {
-      if (upd[0] > 0) res.sendStatus(200).send(upd[1][0].dataValues);
+      if (upd[0] > 0) res.status(200).send(upd[1][0].dataValues);
       else res.sendStatus(400);
     })
     .catch(() => res.sendStatus(400));
