@@ -52,9 +52,9 @@ usersC.modUsuario = (req, res) => {
   const { id } = req.params;
   const data = req.body;
 
-  Users.update(data, { where: { id } })
+  Users.update(data, { where: { id }, returning: true })
     .then((upd) => {
-      if (upd > 0) res.sendStatus(200);
+      if (upd[0] > 0) res.send(upd[1]).sendStatus(200);
       else res.sendStatus(400);
     })
     .catch(() => res.sendStatus(400));
@@ -86,7 +86,6 @@ usersC.oneUsuario = (req, res) => {
 };
 
 usersC.meUsuario = (req, res) => {
-  console.log("req.user from me", req.user);
   res.send(req.user);
 };
 
