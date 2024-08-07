@@ -16,6 +16,6 @@ reviews.get("/users/:uid", reviewsC.userReview);
 reviews.get("/", reviewsC.allReview);
 
 //del rewview
-reviews.delete("/:id", validateUser, reviewsC.delReview);
+reviews.delete("/:id", reviewsC.delReview);
 
 module.exports = reviews;

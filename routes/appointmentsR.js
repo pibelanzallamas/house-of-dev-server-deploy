@@ -7,7 +7,7 @@ const validateUser = require("../middleware/auth");
 appointments.post("/register", appointmentC.crearApp);
 
 //check all
-appointments.get("/all", validateUser, appointmentC.allApp);
+appointments.get("/all", appointmentC.allApp);
 
 //check 1 user
 appointments.get("/:uid", appointmentC.userApp);

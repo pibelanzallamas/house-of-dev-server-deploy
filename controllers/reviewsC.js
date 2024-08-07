@@ -41,17 +41,15 @@ reviewsC.allReview = (req, res) => {
 reviewsC.delReview = (req, res) => {
   const { id } = req.params;
 
-  if (req.user.admin) {
-    Reviews.destroy({ where: { id } })
-      .then((filasAfectadas) => {
-        if (filasAfectadas > 0) {
-          res.sendStatus(200);
-        } else {
-          res.sendStatus(202);
-        }
-      })
-      .catch(() => res.sendStatus(400));
-  }
+  Reviews.destroy({ where: { id } })
+    .then((filasAfectadas) => {
+      if (filasAfectadas > 0) {
+        res.sendStatus(200);
+      } else {
+        res.sendStatus(202);
+      }
+    })
+    .catch(() => res.sendStatus(400));
 };
 
 module.exports = reviewsC;
