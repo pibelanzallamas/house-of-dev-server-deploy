@@ -70,11 +70,9 @@ usersC.delUsuario = (req, res) => {
 };
 
 usersC.allUsuario = (req, res) => {
-  if (req.user.admin) {
-    Users.findAll({ order: [["id", "ASC"]] })
-      .then((one) => res.send(one).status(200))
-      .catch((err) => res.send(err).status(400));
-  }
+  Users.findAll({ order: [["id", "ASC"]] })
+    .then((one) => res.send(one).status(200))
+    .catch((err) => res.send(err).status(400));
 };
 
 usersC.oneUsuario = (req, res) => {

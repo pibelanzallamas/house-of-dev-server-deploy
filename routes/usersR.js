@@ -23,3 +23,5 @@ users.post("/register/:email", usersC.confAppoUsuario);
 users.post("/delete/:email", usersC.cancAppoUsuario);
 
 module.exports = users;
+
+//vaidar usuario, con user.admin
