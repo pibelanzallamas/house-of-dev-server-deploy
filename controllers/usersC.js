@@ -62,11 +62,9 @@ usersC.modUsuario = (req, res) => {
 
 usersC.delUsuario = (req, res) => {
   const { id } = req.params;
-  if (req.user.admin) {
-    Users.destroy({ where: { id } })
-      .then(() => res.sendStatus(200))
-      .catch(() => res.sendStatus(400));
-  }
+  Users.destroy({ where: { id } })
+    .then(() => res.sendStatus(200))
+    .catch(() => res.sendStatus(400));
 };
 
 usersC.allUsuario = (req, res) => {
