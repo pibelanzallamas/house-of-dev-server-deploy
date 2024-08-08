@@ -1,6 +1,7 @@
 const express = require("express");
 const users = express.Router();
 const { usersC } = require("../controllers");
+const validateUser = require("../middleware/auth");
 
 users.post("/register", usersC.crearUsuario);
 
@@ -10,7 +11,7 @@ users.put("/:id", usersC.modUsuario);
 
 users.delete("/:id", usersC.delUsuario);
 
-users.get("/all", usersC.allUsuario);
+users.get("/all", validateUser, usersC.allUsuario);
 
 users.get("/:id", usersC.oneUsuario);
 
