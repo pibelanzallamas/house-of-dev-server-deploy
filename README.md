@@ -5,6 +5,7 @@ House of Dev:
 Sitio web que simula un sitio de bienes raices con funcionalidades de primera categoría, como reservar una reunión en la propiedad, confirmación y cancelación por mail, guardar favoritos, y control total de la plataforma en modo admin.
 
 [Sitio web](https://house-of-dev-client.vercel.app/)
+
 [Demo](https://www.youtube.com/watch?v=LiaV7xHjJmk)
 
 [Front-End](https://github.com/pibelanzallamas/house-of-dev-client-deploy)
