@@ -11,10 +11,10 @@ const db = new Sequelize(
     dialect: "postgres",
     logging: false,
     dialectOptions: {
-      ssl: process.env.DB_SSL === 'true' ? { 
+      ssl: { 
         require: true, 
-        rejectUnauthorized: false 
-      } : false
+        rejectUnauthorized: true 
+      }
     },
     timezone: "-03:00",
   }
