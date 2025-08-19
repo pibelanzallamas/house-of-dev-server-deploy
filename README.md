@@ -3,8 +3,6 @@ Sitio web que simula un sitio de bienes raices con funcionalidades de primera ca
 
 [Sitio web](https://house-of-dev-client.vercel.app/)
 
-
-
 Entrar al sitio web, y registrarse con mail y contraseña (no hace falta confirmar mail).
 Para ver el modo admin, mirar la demo.
 
