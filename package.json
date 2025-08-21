@@ -27,7 +27,6 @@
     "nodemailer": "^6.10.1",
     "pg": "^8.16.3",
     "pg-hstore": "^2.3.4",
-    "semver": "^7.7.2",
     "sequelize": "^6.35.0",
     "validator": "^13.7.0"
   },
